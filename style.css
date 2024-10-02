@@ -13,6 +13,9 @@ body{
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
+    &.Q1{
+        background-color: #bc4444;
+    }
 
 }
 
@@ -23,6 +26,10 @@ body{
 
 .AAQ{
     margin: 20px 120px;
+    position: fixed;
+}
+.AAQ1{
+    margin: 20px 220px;
     position: fixed;
 }
 
@@ -58,7 +65,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 .FF1{

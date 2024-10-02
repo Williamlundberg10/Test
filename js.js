@@ -103,6 +103,13 @@ function SET() {
     localStorage.setItem("MM", JSON.stringify(MM)); // Store MM as a string
 }
 
+function SSSS() {
+    PA = 0
+    MM = []
+    SET()
+    window.open('index.html', "_self")
+}
+
 function deleteFromMM(valueToDelete) {
     // Filter out the value to delete
     MM = MM.filter(item => item !== valueToDelete);
@@ -207,3 +214,4 @@ function LL() {
         document.getElementById('PcP').textContent = 'A'
     }
 }
+
