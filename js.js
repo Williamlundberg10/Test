@@ -26,7 +26,7 @@ function FF(Namn, L, D11, B, PP1) {
     NNq1 = Namn;
     NNq2 = L;
     NNq3 = D11;
-    NNq4 = B;
+    nnq4 = B
     NNq5 = PP1;
 
     // Fetch the first JSON file
@@ -52,7 +52,7 @@ function FF(Namn, L, D11, B, PP1) {
         })
         .then(data => {
             var NN = data[GG];
-            II(HH, NN, Namn, B, PP1);
+            II(HH, NN, Namn,PP1);
         })
         .catch(error => {
             console.error('Fetch error:', error); // Handle any errors that occur during fetch
@@ -63,11 +63,12 @@ function JJ(AQ) {
     // Ensure NNq1, NNq2, and NNq3 are properly set before calling FF
     console.log('JJ called with:', NNq1, NNq2, NNq3);
     FF(NNq1, NNq2, NNq3, AQ, NNq5);
+    QQQQ('<' + AQ)
 }
 
 
 
-function II(HH, NN, Namn, B, PP1) {
+function II(HH, NN, Namn, PP1) {
     console.log('User Input:', HH);
     console.log('Expected Answer:', NN);
     
@@ -95,7 +96,6 @@ function II(HH, NN, Namn, B, PP1) {
         }
     }
 
-    QQQQ('<' + B)
 }
 
 function SET() {
@@ -163,31 +163,82 @@ function DB() {
 DB()
 
 function QQQQ(V) {
-    if (V == 'E') {
-        window.open('ELS.html', "_self")
+    
+    var popElement = document.getElementById('pop');
+    var leftValue = window.getComputedStyle(popElement).left;
+
+    // Set the initial state for FQQWW
+    let FQQWW = true;
+
+    // Set the class of the eleme
+    
+    
+    // Mapping of values to URLs
+    var urlMap = {
+        'E': 'ELS.html',
+        'M': 'MLS.html',
+        'H': 'HLS.html',
+        'I': 'L/I.html',
+        '<': 'index.html',
+        '<!': '../index.html',
+        '<1': '../ELS.html',
+        '<2': '../MLS.html',
+        '<3': '../HLS.html'
+    };
+
+
+
+    // Function to check position and navigate
+    function checkPosition() {
+        if (leftValue == '0px') {
+            if (urlMap[V]) {
+                FQQWW = false; // Update the loop control variable
+                window.location.href = urlMap[V]; // Use window.location.href for navigation
+            }
+        }else{
+            document.getElementById('pop').className = 'BOXQQQQ';
+        }
     }
-    if (V == 'M') {
-        window.open('MLS.html', "_self")
-    }
-    if (V == 'H') {
-        window.open('HLS.html', "_self")
-    }
-    if (V == '<') {
-        window.open('index.html', "_self")
-    }
-    if (V == '<1') {
-        window.open('../ELS.html', "_self")
-    }
-    if (V == '<2') {
-        window.open('../MLS.html', "_self")
-    }
-    if (V == '<3') {
-        window.open('../HLS.html', "_self")
+
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+            checkPosition();
+            leftValue = window.getComputedStyle(popElement).left;
+            console.log(leftValue)
+        }, i * 100);
     }
 }
 
+
+
+
+
+
 function QQ(V) {
-    window.open('L/' + V + '.html', "_self");
+
+    var popElement = document.getElementById('pop');
+    var leftValue = window.getComputedStyle(popElement).left;
+
+    // Set the initial state for FQQWW
+    let FQQWW = true;
+
+
+
+    function checkPosition() {
+        if (leftValue == '0px') {
+            window.open('L/' + V + '.html', "_self");
+        }else{
+            document.getElementById('pop').className = 'BOXQQQQ';
+        }
+    }
+
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+            checkPosition();
+            leftValue = window.getComputedStyle(popElement).left;
+            console.log(leftValue)
+        }, i * 100);
+    }
 }
 
 function LL() {
@@ -215,3 +266,81 @@ function LL() {
     }
 }
 
+var MN = 0
+var FF1 = '';
+function RRRR() {
+    var HH1 = document.getElementById('HEE');
+    var HH2 = document.getElementById('HRR');
+    var FF = '';
+    FF1 = '';
+    var GG = 5 + MN;
+
+    // Function to generate random integers between min (inclusive) and max (inclusive)
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    var randomInt = getRandomInt(1, GG);
+    var randomInt1 = getRandomInt(1, GG);
+    var random = getRandomInt(1, 6);
+
+    if (random == 1 || random == 5) {
+        FF = randomInt + ' + ' + randomInt1;
+    } else if (random == 2 || random == 6) {
+        FF = randomInt + ' - ' + randomInt1;
+    } else if (random == 3) {
+        FF = randomInt + ' / ' + randomInt1;
+    } else if (random == 4) {
+        FF = randomInt + ' * ' + randomInt1;
+    }
+
+    FF1 = eval(FF); // Evaluate the string expression to get the result
+    console.log(FF);
+    console.log(FF1);
+    console.log(MN);
+    HH1.textContent = FF
+    HH2.textContent = MN
+
+}
+
+function GFD() {
+    var HH = document.getElementById('in1');
+    if (HH.value == FF1 && !HH.value == '' ) {
+        MN += 1
+    }
+    HH.value = ""
+    RRRR()
+}
+
+document.addEventListener('keydown', function(event) {
+    // Check if Ctrl + Shift + S is pressed
+    if (event.key == "Enter") {
+        // Prevent default behavior (optional)
+        event.preventDefault();
+        
+        // Focus the input element
+        if (document.activeElement === document.getElementById('in1')) {
+            GFD();
+        }
+
+        if (document.activeElement === document.getElementById('in')) {
+            if (NNq5 == 1) {
+                FF(NNq1, NNq2, NNq3, 1, NNq5);
+                QQQQ('<1')
+            }
+            if (NNq5 == 2) {
+                FF(NNq1, NNq2, NNq3, 2, NNq5);
+                QQQQ('<2')
+            }
+            if (NNq5 == 5) {
+                FF(NNq1, NNq2, NNq3, 3, NNq5);
+                QQQQ('<3')
+            }
+        }
+        
+    }
+});
+
+function NNNQQ() {
+    document.getElementById('pop').className = 'BOXQQQQ q1';
+}
