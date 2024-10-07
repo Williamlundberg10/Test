@@ -165,7 +165,7 @@ DB()
 function QQQQ(V) {
     
     var popElement = document.getElementById('pop');
-    var leftValue = window.getComputedStyle(popElement).left;
+    var leftValue = window.getComputedStyle(popElement).borderRadius;
 
     // Set the initial state for FQQWW
     let FQQWW = true;
@@ -203,7 +203,7 @@ function QQQQ(V) {
     for (let i = 0; i < 10; i++) {
         setTimeout(() => {
             checkPosition();
-            leftValue = window.getComputedStyle(popElement).left;
+            leftValue = window.getComputedStyle(popElement).borderRadius;
             console.log(leftValue)
         }, i * 100);
     }

@@ -1,84 +1,111 @@
-body{
-    background-color: #737373;
+:root {
+    --R: #bc4444;     /* Red */
+    --G: #737373;     /* Gray (dark) */
+    --G2: #B9B9B9;    /* Gray (medium) */
+    --G3: #41AF39;    /* Green */
+    
+    --R1: #D9534F;    /* Light Red */
+    --R2: #AF3939;    /* Darker Red */
+    
+    --G4: #D3D3D3;    /* Light Gray */
+    --G5: #4B4B4B;    /* Dark Gray */
+    
+    --B: #5BC0DE;     /* Blue */
+    --B2: #1F77B4;    /* Dark Blue */
+    
+    --Y: #F0AD4E;     /* Yellow/Orange */
+    --Y2: #CCA122;    /* Dark Yellow/Gold */
+    
+    --P: #C793E1;     /* Purple */
+    --P2: #9B59B6;    /* Dark Purple */
+    
+    --O: #F39C12;     /* Orange */
+    --O2: #E67E22;    /* Darker Orange */
+    
+    --W: #FFFFFF;     /* White */
+    --BK: #000000;    /* Black */
 }
 
-.PP{
+body {
+    background-color: var(--G);
+}
+
+.PP {
     display: flex;
     width: 93px;
     height: 93px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 45px;
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
-    &.Q1{
-        background-color: #bc4444;
-    }
-
 }
 
-.PPq1{
+.PP.Q1 {
+    background-color: var(--R);
+}
+
+.PPq1 {
     display: flex;
     position: fixed;
     width: 93px;
     height: 93px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 45px;
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
-    &.Q1{
-        background-color: #bc4444;
-    }
-
 }
 
-.AA{
+.PPq1.Q1 {
+    background-color: var(--R);
+}
+
+.AA {
     margin: 20px;
     position: fixed;
 }
 
-.AAQ{
+.AAQ {
     margin: 20px 120px;
     position: fixed;
 }
-.AAQ1{
+
+.AAQ1 {
     margin: 20px 220px;
     position: fixed;
 }
 
-
-
-.FF{
+.FF {
     display: flex;
     width: 116px;
     height: 116px;
-    background-color: #41AF39;
+    background-color: var(--G3);
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 40px;
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
-    &.q2{
-        background-color: #CCA122;
-    }
-    &.q3{
-        background-color: #AF3939;
-    }
-
-
 }
 
-.FFq{
+.FF.q2 {
+    background-color: var(--Y2);
+}
+
+.FF.q3 {
+    background-color: var(--R2);
+}
+
+.FFq {
     display: flex;
     width: 384px;
     height: 70px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 30px;
@@ -87,12 +114,12 @@ body{
     align-items: center;
 }
 
-.VV{
+.VV {
     display: flex;
     gap: 18px;
 }
 
-.DD{
+.DD {
     display: flex;
     gap: 18px;
     flex-direction: column;
@@ -101,48 +128,49 @@ body{
     height: 95vh;
 }
 
-.FF1{
+.FF1 {
     display: flex;
     width: 116px;
     height: 116px;
-    background-color: #C1C1C1;
+    background-color: var(--G2);
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 40px;
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
-    &.V1{
-        background-color: #41AF39;
-    }
-    &.V2{
-        background-color: #AF3939;
-    }
-
-
 }
 
-.HEE{
+.FF1.V1 {
+    background-color: var(--G3);
+}
+
+.FF1.V2 {
+    background-color: var(--R2);
+}
+
+.HEE {
     display: flex;
     width: 517px;
     height: 94px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 900px;
     font-size: 40px;
     font-family: 'Kavoon';
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    &.q1{
-        font-size: 30px;
-    }
 }
 
-.HRR{
+.HEE.q1 {
+    font-size: 30px;
+}
+
+.HRR {
     display: flex;
     width: 94px;
     height: 94px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 900px;
     font-size: 40px;
     font-family: 'Kavoon';
@@ -151,11 +179,11 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.HRRq1{
+.HRRq1 {
     display: flex;
     width: 517px;
     height: 54px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     border-radius: 900px;
     font-size: 30px;
     font-family: 'Kavoon';
@@ -164,18 +192,18 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.GHH{
+.GHH {
     display: flex;
     gap: 17px;
 }
 
-.GHHq1{
+.GHHq1 {
     display: flex;
     flex-direction: column;
     gap: 17px;
 }
 
-.BNN{
+.BNN {
     display: flex;
     position: fixed;
     left: 50%;
@@ -184,7 +212,7 @@ body{
     margin-top: 40px;
 }
 
-.BNNq1{
+.BNNq1 {
     display: flex;
     position: fixed;
     left: 50%;
@@ -194,11 +222,11 @@ body{
     gap: 10px;
 }
 
-.TTRR{
+.TTRR {
     display: flex;
     width: 381px;
     height: 51px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 900px;
     font-size: 20px;
@@ -208,11 +236,11 @@ body{
     border-style: none;
 }
 
-.BBRR{
+.BBRR {
     display: flex;
     width: 130px;
     height: 51px;
-    background-color: #B9B9B9;
+    background-color: var(--G2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 900px;
     font-size: 20px;
@@ -221,7 +249,7 @@ body{
     align-items: center;
 }
 
-.VVRR{
+.VVRR {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,22 +257,26 @@ body{
     gap: 6px;
 }
 
-
-.BOXQQQQ{
+.BOXQQQQ {
     display: block;
     position: fixed;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
     z-index: 10;
-    bottom: 0px;
-    left: 0%;
     width: 100%;
     height: 100%;
-    background-color: #383838;
-    &.q1{
-        left: 100%;
-    }
-
-
-
+    background-color: var(--G5);
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
+.BOXQQQQ.q1 {
+    border-radius: 900px;
+    width: 0%;
+    height: 0%;
+    bottom: 50%;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+}
