@@ -223,22 +223,22 @@ function LL() {
     if (PA >= 0) {
         document.getElementById('PcP').textContent = '-';
     }
-    if (PA >= 10) {
+    if (PA >= 15) {
         document.getElementById('PcP').textContent = 'F';
     }
-    if (PA >= 15) {
+    if (PA >= 20) {
         document.getElementById('PcP').textContent = 'E';
     }
-    if (PA >= 20) {
+    if (PA >= 25) {
         document.getElementById('PcP').textContent = 'D';
     }
-    if (PA >= 25) {
+    if (PA >= 30) {
         document.getElementById('PcP').textContent = 'C';
     }   
-    if (PA >= 35) {
+    if (PA >= 40) {
         document.getElementById('PcP').textContent = 'B';
     }
-    if (PA >= 45) {
+    if (PA >= 50) {
         document.getElementById('PcP').textContent = 'A';
     }
 }
